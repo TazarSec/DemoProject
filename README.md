@@ -1,6 +1,6 @@
 # DemoProject
 
-A small Vite + React + TypeScript app used to demo a supply-chain security tool
+A small Vite + React + TypeScript app used to demo a supply-chain security tool Manticore
 that scans npm dependencies on pull requests.
 
 ## Stack
@@ -26,6 +26,7 @@ npm run preview  # preview the production build locally
 ## CI
 
 `.github/workflows/ci.yml` runs on every push to `main` and every pull request.
+It scans dependencies with manticore for potentially malicious dependencies before moving on to installing anything.
 It installs dependencies with `npm ci`, then runs lint, tests, and the
 production build. This is where the supply-chain security tool will be wired
 in to scan new npm dependencies introduced by pull requests.
