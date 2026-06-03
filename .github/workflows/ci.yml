@@ -28,6 +28,7 @@ jobs:
         uses: TazarSec/ManticoreScanner@v0.1.1
         with:
           vcs-comment: "true"
+          file: "package.json"
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
